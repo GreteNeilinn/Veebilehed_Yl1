@@ -35,6 +35,21 @@ header p {
     text-transform: uppercase;
 }
 
+header hr {
+    display: block;
+    color: #4f5663;
+    border-width: 2px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+} 
+
+@media only screen and (min-width: 950px) {
+    header hr{
+        display: none;
+    }
+}
+
 header nav ul {
     display: block;
     margin: 0 auto;
@@ -125,7 +140,42 @@ header .header-banner img{
 }
 
 .tutvustus img{
-    width: 100%;
+    display: none;
+}
+
+@media only screen and (min-width: 950px) {
+
+    .tutvustus{
+        display: flex;
+        flex-flow: row wrap;
+        display: -webkit-flex;
+        -webkit-flex-flow: row wrap; 
+        display: -moz-flex;
+        -moz-flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .tutvustuse-osa{
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 1px;
+        color: #181818;
+        -webkit-flex-basis: 500px; /*kuigi uuematel brauseri versioonidel peaks ka prefiksiteta töötama*/
+        -moz-flex-basis: 500px;
+        flex-basis: 500px;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .tutvustus p{
+        justify-content: inherit;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .tutvustus img{
+        display: block;
+        width: 100%;
+    }
 }
 
 
@@ -158,6 +208,24 @@ hr {
     display: -moz-flex;
     -moz-flex-flow: row wrap;
     justify-content: center;
+}
+
+.gallery-links h3{
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+    color: #181818;
+    flex-basis: 500px;
+    margin: 10px;
+    position: relative;
+    display: block;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 950px) {
+    .gallery-links h3{
+        display: none;
+    }
 }
 
 .gallery-image {
@@ -231,3 +299,21 @@ footer ul li {
     width: 100%;
     margin-bottom: 10px;
 }
+    
+    /*.disclaimer {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 24px;
+        color: #fff;
+        text-transform: uppercase; 
+        float: left;
+        margin: 0 80px;
+    }
+    
+    .disclaimer span {
+        font-style: italic;
+    }*/
+
